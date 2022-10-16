@@ -1,5 +1,5 @@
 # *promptu*
-## What is promptu?
+## What is Promptu?
 
 **promptu** is not a messaging app, nor is it a social platform in its traditional form. 
 
@@ -10,7 +10,7 @@ Humans spend between 32% and 75% of their waking time in social interactions and
 
 This is why our way of "taking inspiration from the past and add a twist to it" is to completely rethink the whole dynamics of social media interactions from the ground up. To make those digital interactions more human-like, less serious, and more fun. Our solution is a social media platform based entirely around short spontaneous voice posts following unique prompts that change daily. Allowing users to interact with their friends in a way more similar to how they do in person, by cracking jokes, making funny comments about what is around us, and sharing laughs! 
 
-## How we built it
+## How We Built It 👩🏻‍💻
 
 Our stack includes the following:
 
@@ -18,22 +18,22 @@ Our stack includes the following:
 - Backend: Firebase (Google Cloud Functions, Cloud Storage, Firestore), JavaScript
 - UX Design: Figma
 
-## Challenges we ran into
+## Challenges We Ran Into 🚨
 
 Originally, we wanted to develop our frontend using React Native but we were unable to set it up on our machines. We decided to use React after a few hours of debugging React Native.
 
-## Accomplishments that we're proud of
+## Accomplishments That We're Proud Of 👏
 
 We are proud of our team for working so well together and enjoying the process of creating an app within 24 hours. We were able to make an application wireframe, develop the entire frontend in React, and set up the backend and user authentication in Firebase.
 
-## What we learned
+## What We Learned 🔖
 
 This was the first hackathon for 2 of our team members, so it was very exciting to ideate a software product and immediately oversee the entire development. Some technical learning we did included how to authenticate users using Firebase, how to record and listen to audio files using React, and how to use the Firebase and Firestore SDKs.
 
-## What's next for promptu
+## What's Next for Promptu 🌎
 
 We want to add a feature for adding and searching friends. We also want to sort the feed in the future by most popular (quantified by highest number of smiles - our version of Reddit upvotes).
 
-## Parting words
+## Parting Words 🤝
 
 Thank you so much to HackHarvard for this great experience. Our whole team became very close, and had an engaging and educational time! We are excited to continue iterating on promptu and hopefully launch to the Apple and Android app stores.
