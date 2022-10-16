@@ -1,4 +1,16 @@
-import { Box, Heading, Text, VStack, HStack, Image } from '@chakra-ui/react';
+import {
+	Box,
+	Text,
+	VStack,
+	HStack,
+	Image,
+	Heading,
+	Flex,
+	Center,
+	Stack,
+	Spacer,
+	Spinner,
+} from '@chakra-ui/react';
 import { Wrapper } from '../components/Wrapper';
 import React from 'react';
 import { CreatePost } from '../components/CreatePost';
@@ -11,11 +23,40 @@ import { useAuth } from '../contexts/AuthContext';
 import { getPrompts } from '../queries/getPrompts';
 import { Recorder } from 'react-voice-recorder';
 import './Recording.css';
-const Home = () => {
-	const prompts = getPrompts();
-	const { currentUserId } = useAuth();
-	console.log('bruh');
-	console.log(currentUserId);
+
+const Home = (props) => {
+	const [descriptions, setDescriptions] = useState([]);
+
+	useEffect(() => {
+		const getData = async () => {
+			const response = await getPrompts();
+			setDescriptions(response.data);
+		};
+		getData();
+	}, []);
+	console.log(descriptions.length != 0 ? descriptions[0].description : 'hey');
+	return (
+		<Wrapper variant='small'>
+			<Stack align='center'>
+				<Box>
+					<Heading>Promptu</Heading>
+					<Text>of the day:</Text>
+				</Box>
+				<Spacer />
+				<Box>
+					{descriptions.length == 0 ? (
+						<Spinner />
+					) : (
+						<Text>{descriptions[0].description}</Text>
+					)}
+				</Box>
+				<GoatRecorder />
+			</Stack>
+		</Wrapper>
+	);
+};
+
+const GoatRecorder = () => {
 	const [audioDetails, setAudioDetails] = useState({
 		url: null,
 		blob: null,
@@ -51,24 +92,19 @@ const Home = () => {
 	};
 
 	return (
-		<Box>
-			<div>
-				<h1>promptu</h1>
-				<h3>of the day</h3>
-				<Recorder
-					record={false}
-					title={'New recording'}
-					audioURL={audioDetails}
-					showUIAudio
-					handleAudioStop={(data) => handleAudioStop(data)}
-					handleAudioUpload={(data) => handleAudioUpload(data)}
-					handleReset={() => handleReset()}
-					mimeTypeToUseWhenRecording={`audio/webm`}
-				/>
-			</div>
-		</Box>
+		<Recorder
+			record={false}
+			title={'New recording'}
+			audioURL={audioDetails}
+			showUIAudio
+			handleAudioStop={(data) => handleAudioStop(data)}
+			handleAudioUpload={(data) => handleAudioUpload(data)}
+			handleReset={() => handleReset()}
+			mimeTypeToUseWhenRecording={`audio/webm`}
+		/>
 	);
 };
+
 export default Home;
 // const ContentContainer = (props) => {
 // 	const [posts, setPosts] = useState([]);
