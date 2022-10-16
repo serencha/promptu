@@ -1,9 +1,9 @@
 # *promptu*
 ## What is Promptu?
 
-**promptu** is not a messaging app, nor is it a social platform in its traditional form. 
+**Promptu** is not a messaging app, nor is it a social platform in its traditional form. 
 
-We created **promptu** to eliminate the pressure of traditional social media and enable less consequential online presence. Create a place for users to have genuine, fun, and impromptu interactions that imitate in-person banter.
+We created **Promptu** to eliminate the pressure of traditional social media and enable less consequential online presence. Create a place for users to have genuine, fun, and impromptu interactions that imitate in-person banter.
 
 ## 💡 Inspiration 💡
 Humans spend between 32% and 75% of their waking time in social interactions and on average 2 hours 27 minutes using social media. Clearly a significant portion of social interactions is occurring online hence the abundance of different unique social media platforms. One of the great things social media allows us to do is bridge the distance with people we often wouldn't be able to see face to face. However, the way these platforms are designed puts a lot of pressure on building your digital profile, and they all rely on image and text as a medium of communication. These mediums are effective but also limit how genuine the online interactions are. Think about last time you posted on social media - how much time did you spent fixing your post and considering how people will react to every photo you post or sentence you write? That is not how in-person communications happen, you don't have time to think about your answers thoroughly - you're forced to be genuine and that's what makes them real and fun. We would like to see more of that in the digital space. 
@@ -36,4 +36,4 @@ We want to add a feature for adding and searching friends. We also want to sort 
 
 ## 🤝 Parting Words 🤝
 
-Thank you so much to HackHarvard for this great experience. Our whole team became very close, and had an engaging and educational time! We are excited to continue iterating on promptu and hopefully launch to the Apple and Android app stores.
+Thank you so much to HackHarvard for this great experience. Our whole team became very close, and had an engaging and educational time! We are excited to continue iterating on Promptu and hopefully launch to the Apple and Android app stores.
