@@ -4,14 +4,22 @@ Humans spend between 32 and 75% of their waking time in social interactions and 
 
 This is why our way of "taking inspiration from the past and add a twist to it" is to completely rethink the whole dynamincs of social media interactions from the ground up. To make those digital interactions more human-like, less serious, less consequential, more forgiving, and more fun. Our solution is a social media platform based entirely around short spontaneous voice posts following unique prompts that change daily. Allowing users to interact with their friends in a way more similar to how they do in person, by cracking jokes, making funny comments about what is around us, and sharing laughs! 
 
-## What it is and isn't
+## What it does
 
 **promptu** is not a messaging app, or a social platform in its traditional form. 
 
 We created **promptu** aiming to enhance the experience of users that are already on other social media platforms by creating a space with a very specific purpose in mind. To eliminate the pressure of traditional social media and enable less consequential online presence. Create a place for users to have genuine, fun, liberating and spontaneous interactions that imitate the in-person banter by providing funny new prompts every day that users will respond to by posting short voice recordings. 
 
-## Features
+## How we built it
 
- - Post daily voice recordings 
- - Add friends
- - React to friends posts with your own voice or emoji
+
+## Challenges we ran into
+
+
+## Accomplishments that we're proud of
+
+
+## What we learned
+
+
+## What's next for promptu
