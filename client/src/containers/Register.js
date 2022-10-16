@@ -12,9 +12,12 @@ function Register() {
 
 	return (
 		<Wrapper variant='small'>
-			<Heading p={3}>Create an Account</Heading>
-			<Box shadow='md' borderWidth='1px' borderRadius='md' p={5}>
+			<Heading p={3} color='white'>
+				Create an Account
+			</Heading>
+			<Box shadow='md' borderWidth='1px' borderRadius='md' p={5} color='white'>
 				<Formik
+					color='white'
 					initialValues={{
 						username: '',
 						email: '',
@@ -37,7 +40,7 @@ function Register() {
 					}}
 				>
 					{({ isSubmitting }) => (
-						<Form>
+						<Form color='white'>
 							<InputField
 								name='username'
 								placeholder='username'
@@ -62,16 +65,21 @@ function Register() {
 									type='password'
 								/>
 							</Box>
-							<Button type='submit' colorScheme='teal' mt={4}>
+							<Button type='submit' colorScheme='red' mt={4}>
 								Sign Up
 							</Button>
 						</Form>
 					)}
 				</Formik>
 			</Box>
-			<Box mt={3} ml={5}>
+			<Box mt={3} ml={5} color='rgba(255,255,255,.8)'>
 				Already have an account?{' '}
-				<Link as={ReactLink} to='/login' color='teal'>
+				<Link
+					as={ReactLink}
+					to='/login'
+					color='rgba(255,255,255,1)'
+					fontWeight='semibold'
+				>
 					Login here.
 				</Link>
 			</Box>

@@ -37,7 +37,7 @@ export class Recording extends React.Component {
 		const audioRef = storage.ref(`audio_files/${uid}`);
 		audioRef.put(chunks).then((snapshot) => {
 			console.log('Uploaded an array!');
-			window.location.href = '/explore';
+			window.location.href = '/explore'; // jank lmao
 		});
 
 		// audioRef.putString(blobUrl, 'data_url').then((snapshot) => {

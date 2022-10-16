@@ -1,5 +1,5 @@
 import { Wrapper } from '../components/Wrapper';
-import { Box, Button, Link, Heading } from '@chakra-ui/react';
+import { Box, Button, Link, Stack } from '@chakra-ui/react';
 import { Formik, Form } from 'formik';
 import { InputField } from '../components/InputField';
 import { useHistory, Link as ReactLink } from 'react-router-dom';
@@ -11,10 +11,13 @@ function Login() {
 	const history = useHistory();
 	return (
 		<Wrapper variant='small'>
-			<img src={logo} alt='React Logo' />
-			<heading id='heading'>promptu</heading>
-			<Box shadow='md' borderWidth='1px' borderRadius='md' p={5}>
+			<Stack align='center' pb={5}>
+				<img src={logo} alt='Promptu Logo' />
+				<heading id='heading'>promptu</heading>
+			</Stack>
+			<Box shadow='md' borderWidth='1px' borderRadius='md' p={5} color='white'>
 				<Formik
+					color='white'
 					initialValues={{ email: '', password: '' }}
 					onSubmit={async (values, { setErrors }) => {
 						try {
@@ -27,8 +30,14 @@ function Login() {
 					}}
 				>
 					{({ isSubmitting }) => (
-						<Form>
-							<InputField name='email' placeholder='email' label='Email' />
+						<Form color='white'>
+							<InputField
+								color='white'
+								name='email'
+								placeholder='email'
+								label='Email'
+								// color='rgba(255, 255, 255, 0.1)'
+							/>
 							<Box mt={3}>
 								<InputField
 									name='password'
@@ -39,7 +48,7 @@ function Login() {
 							</Box>
 							<Button
 								type='submit'
-								colorScheme='teal'
+								colorScheme='red'
 								isLoading={isSubmitting}
 								mt={4}
 							>
@@ -49,9 +58,14 @@ function Login() {
 					)}
 				</Formik>
 			</Box>
-			<Box mt={3} ml={5}>
+			<Box mt={3} ml={5} color='rgba(255,255,255,.8)'>
 				Don't have an account yet?{' '}
-				<Link as={ReactLink} to='/register' color='teal'>
+				<Link
+					as={ReactLink}
+					to='/register'
+					color='rgba(255,255,255,1)'
+					fontWeight='semibold'
+				>
 					Register here.
 				</Link>
 			</Box>
