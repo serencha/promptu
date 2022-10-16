@@ -1,0 +1,16 @@
+.chakra-ui-dark {
+	background-image: url('../public/promptu.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 100%;
+}
+.body {
+	font-family: 'Times New Roman', Times, serif;
+}
+#heading {
+	color: aliceblue;
+	font-weight: bolder;
+	letter-spacing: 0.1rem;
+	font-size: 2rem;
+}

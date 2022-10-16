@@ -5,13 +5,14 @@ import { InputField } from '../components/InputField';
 import { useHistory, Link as ReactLink } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useEffect } from 'react';
-
+import logo from './Vector.svg';
 function Login() {
 	const { login, getUser } = useAuth();
 	const history = useHistory();
 	return (
 		<Wrapper variant='small'>
-			<Heading p={3}>Sign into Account</Heading>
+			<img src={logo} alt='React Logo' />
+			<heading id='heading'>promptu</heading>
 			<Box shadow='md' borderWidth='1px' borderRadius='md' p={5}>
 				<Formik
 					initialValues={{ email: '', password: '' }}

@@ -8,16 +8,63 @@ import { useEffect, useState } from 'react';
 import { truncate } from '../utils/truncate';
 import { db } from '../firebase';
 import { useAuth } from '../contexts/AuthContext';
-
+import { getPrompts } from '../queries/getPrompts';
+import { Recorder } from 'react-voice-recorder';
+import './Recording.css';
 const Home = () => {
+	const prompts = getPrompts();
 	const { currentUserId } = useAuth();
 	console.log('bruh');
 	console.log(currentUserId);
+	const [audioDetails, setAudioDetails] = useState({
+		url: null,
+		blob: null,
+		chunks: null,
+		duration: {
+			h: 0,
+			m: 0,
+			s: 0,
+		},
+	});
+	const handleClick = () => {
+		console.log('this is:', this);
+	};
+	const handleAudioStop = (data) => {
+		console.log(data);
+		this.setState({ audioDetails: data });
+	};
+	const handleAudioUpload = (file) => {
+		console.log(file);
+	};
+	const handleReset = () => {
+		const reset = {
+			url: null,
+			blob: null,
+			chunks: null,
+			duration: {
+				h: 0,
+				m: 0,
+				s: 0,
+			},
+		};
+		this.setState({ audioDetails: reset });
+	};
+
 	return (
 		<Box>
 			<div>
 				<h1>promptu</h1>
 				<h3>of the day</h3>
+				<Recorder
+					record={false}
+					title={'New recording'}
+					audioURL={audioDetails}
+					showUIAudio
+					handleAudioStop={(data) => handleAudioStop(data)}
+					handleAudioUpload={(data) => handleAudioUpload(data)}
+					handleReset={() => handleReset()}
+					mimeTypeToUseWhenRecording={`audio/webm`}
+				/>
 			</div>
 		</Box>
 	);
