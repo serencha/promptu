@@ -18,7 +18,7 @@ Our stack includes the following:
 - Backend: Firebase (Google Cloud Functions, Cloud Storage, Firestore), JavaScript
 - UX Design: Figma
 
-## 🪲 Challenges We Ran Into 
+## 🐛 Challenges We Ran Into 
 
 Originally, we wanted to develop our frontend using React Native but we were unable to set it up on our machines. We decided to use React after a few hours of debugging React Native.
 
