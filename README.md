@@ -1,4 +1,4 @@
-# *promptu*
+# *Promptu*
 ## What is Promptu?
 
 **Promptu** is a social media platform based entirely around spontaneous audio messages about engaging and fun prompts that change daily.
