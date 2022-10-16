@@ -7,7 +7,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { useEffect } from 'react';
 
 function Login() {
-	const { login } = useAuth();
+	const { login, getUser } = useAuth();
 	const history = useHistory();
 	return (
 		<Wrapper variant='small'>
@@ -17,6 +17,7 @@ function Login() {
 					initialValues={{ email: '', password: '' }}
 					onSubmit={async (values, { setErrors }) => {
 						try {
+							await getUser(values.email);
 							await login(values.email, values.password);
 							history.push('/');
 						} catch {

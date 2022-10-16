@@ -6,8 +6,8 @@ import { useHistory, Link as ReactLink } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useEffect } from 'react';
 
-function Login() {
-	const { signup } = useAuth();
+function Register() {
+	const { signup, createUser } = useAuth();
 	const history = useHistory();
 
 	return (
@@ -15,14 +15,21 @@ function Login() {
 			<Heading p={3}>Create an Account</Heading>
 			<Box shadow='md' borderWidth='1px' borderRadius='md' p={5}>
 				<Formik
-					initialValues={{ email: '', password: '', confirmPassword: '' }}
+					initialValues={{
+						username: '',
+						email: '',
+						password: '',
+						confirmPassword: '',
+					}} // bruh
 					onSubmit={async (values, { setErrors }) => {
 						if (values.password !== values.confirmPassword) {
 							return setErrors('Passwords do not match');
 						}
 
 						try {
+							await createUser(values.username);
 							await signup(values.email, values.password);
+							// todo -> add username
 							history.push('/');
 						} catch {
 							setErrors('Failed to create an account');
@@ -31,7 +38,14 @@ function Login() {
 				>
 					{({ isSubmitting }) => (
 						<Form>
-							<InputField name='email' placeholder='email' label='Email' />
+							<InputField
+								name='username'
+								placeholder='username'
+								label='Username'
+							/>
+							<Box mt={3}>
+								<InputField name='email' placeholder='email' label='Email' />
+							</Box>
 							<Box mt={3}>
 								<InputField
 									name='password'
@@ -65,4 +79,4 @@ function Login() {
 	);
 }
 
-export default Login;
+export default Register;

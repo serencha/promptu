@@ -7,9 +7,20 @@ import { Navbar } from '../components/Navbar';
 import { useEffect, useState } from 'react';
 import { truncate } from '../utils/truncate';
 import { db } from '../firebase';
+import { useAuth } from '../contexts/AuthContext';
 
 const Home = () => {
-	return <Box>Hello</Box>;
+	const { currentUserId } = useAuth();
+	console.log('bruh');
+	console.log(currentUserId);
+	return (
+		<Box>
+			<div>
+				<h1>promptu</h1>
+				<h3>of the day</h3>
+			</div>
+		</Box>
+	);
 };
 export default Home;
 // const ContentContainer = (props) => {
