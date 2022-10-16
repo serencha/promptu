@@ -21,8 +21,11 @@ import { truncate } from '../utils/truncate';
 import { db } from '../firebase';
 import { useAuth } from '../contexts/AuthContext';
 import { getPrompts } from '../queries/getPrompts';
-import { Recorder } from 'react-voice-recorder';
-import './Recording.css';
+import { Recording } from '../components/Recording';
+import { useHistory } from 'react-router-dom';
+// import { Recorder } from 'react-voice-recorder';
+// import 'react-voice-recorder/dist/index.css';
+// import './Recording.css';
 
 const Home = (props) => {
 	const [descriptions, setDescriptions] = useState([]);
@@ -47,63 +50,55 @@ const Home = (props) => {
 					{descriptions.length == 0 ? (
 						<Spinner />
 					) : (
-						<Text>{descriptions[0].description}</Text>
+						<Text fontWeight='extrabold'>{descriptions[0].description}!</Text>
 					)}
 				</Box>
-				<GoatRecorder />
+				<Recording />
 			</Stack>
 		</Wrapper>
 	);
 };
 
-const GoatRecorder = () => {
-	const [audioDetails, setAudioDetails] = useState({
-		url: null,
-		blob: null,
-		chunks: null,
-		duration: {
-			h: 0,
-			m: 0,
-			s: 0,
-		},
-	});
-	const handleClick = () => {
-		console.log('this is:', this);
-	};
-	const handleAudioStop = (data) => {
-		console.log(data);
-		this.setState({ audioDetails: data });
-	};
-	const handleAudioUpload = (file) => {
-		console.log(file);
-	};
-	const handleReset = () => {
-		const reset = {
-			url: null,
-			blob: null,
-			chunks: null,
-			duration: {
-				h: 0,
-				m: 0,
-				s: 0,
-			},
-		};
-		this.setState({ audioDetails: reset });
-	};
+// const GoatRecorder = () => {
+// 	const [audioDetails, setAudioDetails] = useState({
+// 		url: null,
+// 		blob: null,
+// 		chunks: null,
+// 		duration: {
+// 			h: 0,
+// 			m: 0,
+// 			s: 0,
+// 		},
+// 	});
 
-	return (
-		<Recorder
-			record={false}
-			title={'New recording'}
-			audioURL={audioDetails}
-			showUIAudio
-			handleAudioStop={(data) => handleAudioStop(data)}
-			handleAudioUpload={(data) => handleAudioUpload(data)}
-			handleReset={() => handleReset()}
-			mimeTypeToUseWhenRecording={`audio/webm`}
-		/>
-	);
-};
+// 	const handleAudioStop = (data) => {
+// 		console.log(data);
+// 		setAudioDetails(data);
+// 	};
+
+// 	const handleAudioUpload = (file) => {
+// 		console.log(file);
+// 	};
+
+// 	const handleReset = () => {
+// 		const reset = {
+// 			url: null,
+// 			blob: null,
+// 			chunks: null,
+// 			duration: {
+// 				h: 0,
+// 				m: 0,
+// 				s: 0,
+// 			},
+// 		};
+// 		setAudioDetails(reset);
+// 	};
+
+// 	// const handleChange = (event) => {
+// 	// 	console.log(event.target);
+// 	// 	setAudioDetails(event.target);
+// 	// };
+// };
 
 export default Home;
 // const ContentContainer = (props) => {
