@@ -1,7 +1,7 @@
 # *Promptu*
 ## What is Promptu?
 
-**Promptu** is a social media platform based entirely on spontaneous voice messages that answer engaging and fun prompts that change daily.
+**Promptu** is a social media platform based entirely on spontaneous voice messages that answer daily engaging and fun prompts.
 
 We created **Promptu** to eliminate the pressure of traditional social media and enable less consequential online presence. Create a place for users to have genuine, fun, and impromptu interactions that imitate in-person banter.
 
