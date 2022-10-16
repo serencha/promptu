@@ -1,7 +1,7 @@
 # *promptu*
 ## What is Promptu?
 
-**Promptu** is not a messaging app, nor is it a social platform in its traditional form. 
+**Promptu** is a social media platform based entirely around spontaneous audio messages about engaging and fun prompts that change daily.
 
 We created **Promptu** to eliminate the pressure of traditional social media and enable less consequential online presence. Create a place for users to have genuine, fun, and impromptu interactions that imitate in-person banter.
 
@@ -33,6 +33,7 @@ This was the first hackathon for 2 of our team members, so it was very exciting 
 ## 🌎 What's Next for Promptu 🌎
 
 We want to add a feature for adding and searching friends. We also want to sort the feed in the future by most popular (quantified by highest number of smiles - our version of Reddit upvotes).
+We also want to incorporate NLP to detect inappropriate audio messages that are uploaded by users. This will make sure that our app remains a fun, safe, and welcoming space for all.
 
 ## 🤝 Parting Words 🤝
 
