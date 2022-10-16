@@ -28,7 +28,7 @@ We are proud of our team for working so well together and enjoying the process o
 
 ## 🔖 What We Learned
 
-This was the first hackathon for 2 of our team members, so it was very exciting to ideate a software product and immediately oversee the entire development. Some technical learning we did included how to authenticate users using Firebase, how to record and listen to audio files using React, and how to use the Firebase and Firestore SDKs.
+This was the first hackathon for 2 of our team members, so it was very exciting to ideate a software product and then immediately oversee the entire development for the first time. Some technical learning we did included how to authenticate users using Firebase, how to record and listen to audio files using React, and how to use the Firebase and Firestore SDKs.
 
 ## 🌎 What's Next for Promptu
 
@@ -37,4 +37,4 @@ We also want to incorporate NLP to detect inappropriate audio messages that are 
 
 ## 🤝 Parting Words
 
-Thank you so much to HackHarvard for this great experience. Our whole team became very close, and had an engaging and educational time! We are excited to continue iterating on Promptu and hopefully launch to the Apple and Android app stores.
+Thank you so much to HackHarvard for this great experience. Our whole team became very close, and had an engaging and educational time! We are excited to continue iterating on Promptu and hopefully launch to the iOS and Android app stores.
